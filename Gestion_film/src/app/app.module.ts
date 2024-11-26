@@ -18,5 +18,8 @@ import { environment } from '../environments/environment';
   ],
   providers: [],
   bootstrap: [AppComponent]
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
