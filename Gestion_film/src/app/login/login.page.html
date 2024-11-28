@@ -1,0 +1,25 @@
+<ion-content class="ion-padding">
+  <div class="auth-container login-page">
+    <h1 class="title">Log In</h1>
+    <img class="flix-image" src="../../assets/images/flix-1.png" alt="Flix Logo" />
+    <p class="subtitle">Welcome back! Please log in to continue</p>
+
+    <form>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" required></ion-input>
+      </ion-item>
+
+      <ion-button class="auth-button" expand="block">Log In</ion-button>
+    </form>
+
+    <p class="link">
+      Don't have an account? <a routerLink="/signup">Sign Up</a>
+    </p>
+  </div>
+</ion-content>
