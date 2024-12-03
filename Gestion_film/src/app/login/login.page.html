@@ -4,18 +4,18 @@
     <img class="flix-image" src="../../assets/images/flix-1.png" alt="Flix Logo" />
     <p class="subtitle">Welcome back! Please log in to continue</p>
 
-    <form>
+    <form (ngSubmit)="onLogin()">
       <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input type="email" required></ion-input>
+        <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" required></ion-input>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
       </ion-item>
 
-      <ion-button class="auth-button" expand="block">Log In</ion-button>
+      <ion-button class="auth-button" type="submit" expand="block">Log In</ion-button>
     </form>
 
     <p class="link">
