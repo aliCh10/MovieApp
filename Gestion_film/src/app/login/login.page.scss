@@ -1,128 +1,160 @@
-// Styles communs aux deux pages
+// Common styles for both pages
 .auth-container {
-    text-align: center;
-    margin-top: 50px;
-    padding: 25px;
-    background: linear-gradient(to bottom right, #6a11cb, #2575fc); // Dégradé bleu-violet moderne
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-  
-    .title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 20px;
-      font-family: 'Poppins', sans-serif; // Police moderne
-    }
-  
-    .subtitle {
-      font-size: 1.1rem;
-      color: #e0e0e0;
-      margin-bottom: 30px;
-    }
-  
-    .flix-image {
-      width: 100px;
-      margin-bottom: 20px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-  
-    form {
-      animation: fadeIn 1s ease-out;
-  
-      ion-item {
-        --background: rgba(255, 255, 255, 0.1);
-        --border-radius: 15px;
-        --padding-start: 20px;
-        --padding-end: 20px;
-        margin-bottom: 25px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-  
-        ion-label {
-          color: #ffffff;
-          font-weight: bold;
-        }
-  
-        ion-input {
-          color: #ffffff;
-          --placeholder-color: rgba(255, 255, 255, 0.6);
-          caret-color: #ff8e53;
-        }
-      }
-    }
-  
-    .auth-button {
-      margin-top: 20px;
-      background: linear-gradient(90deg, #ff416c, #ff4b2b); // Dégradé rouge-orangé moderne
-      color: #ffffff;
-      border-radius: 15px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      transition: all 0.3s ease;
-  
-      &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5);
-      }
-    }
-  
-    .link {
-      margin-top: 20px;
-      color: #dcdcdc;
-  
-      a {
-        color: #ff8e53;
-        text-decoration: none;
+  text-align: center;
+  margin: 50px auto;
+  padding: 25px;
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  max-width: 400px; // Ensures the container doesn't get too wide on larger screens
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+  }
+
+  .flix-image {
+    width: 100px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  form {
+    animation: fadeIn 1s ease-out;
+
+    ion-item {
+      --background: rgba(255, 255, 255, 0.1);
+      --border-radius: 15px;
+      --padding-start: 20px;
+      --padding-end: 20px;
+      margin-bottom: 25px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+
+      ion-label {
+        color: #ffffff;
         font-weight: bold;
-  
-        &:hover {
-          color: #ffffff;
-        }
+      }
+
+      ion-input {
+        color: #ffffff;
+        --placeholder-color: rgba(255, 255, 255, 0.6);
+        caret-color: #ff8e53;
       }
     }
   }
-  
-  // Animation Fade-In
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+  .auth-button {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: #ffffff;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5);
     }
   }
-  
-  // Page spécifique pour Sign Up
-  .signup-page {
-    .title {
-      font-size: 2.5rem;
+
+  .link {
+    margin-top: 20px;
+    color: #dcdcdc;
+
+    a {
+      color: #ff8e53;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        color: #ffffff;
+      }
     }
-  
+  }
+}
+
+// Responsive breakpoints
+@media (max-width: 768px) {
+  .auth-container {
+    width: 90%;  // Use more width on smaller screens
+    padding: 20px;
+
+    .title {
+      font-size: 2rem;  // Slightly smaller title
+    }
+
     .subtitle {
       font-size: 1rem;
     }
-  
+
+    .flix-image {
+      width: 80px;
+    }
+
     .auth-button {
-      background: linear-gradient(90deg, #ff416c, #ff4b2b); 
-    }
-  }
-  
-  // Page spécifique pour Login
-  .login-page {
-    .title {
-      font-size: 2.5rem;
-    }
-  
-    .subtitle {
       font-size: 1rem;
     }
-  
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    width: 95%;  // Nearly full width on small screens
+    padding: 15px;
+
+    .title {
+      font-size: 1.8rem;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+    }
+
+    .flix-image {
+      width: 70px;
+    }
+
     .auth-button {
-      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      font-size: 0.9rem;
     }
   }
-  
+}
+
+// Fade-In Animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Specific page overrides for consistency
+.signup-page, .login-page {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .auth-button {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  }
+}
