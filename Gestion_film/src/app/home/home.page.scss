@@ -299,6 +299,10 @@ swiper-container {
 
 /* Responsive styling */
 @media (max-width: 768px) {
+  .movie-infos {
+     /* Les éléments s'alignent verticalement sur petits écrans */
+    gap: 5px;
+  }
   .movie-item {
     max-width: 250px;
   }
@@ -309,13 +313,14 @@ swiper-container {
     max-width: 200px;
   }
   .movie-item-title {
-    font-size: 14px;
+    font-size: 8px;
   }
   .movie-info ion-icon {
-    font-size: 18px;
+    font-size: 8px;
   }
   .movie-info ion-label {
-    font-size: 12px;
+    font-size: 8px;
+    font-weight: bold;
   }
 }
 
@@ -342,5 +347,38 @@ ion-img {
 }
 
 ion-card:hover ion-img {
-  transform: scale(1.1);
+  transform: scale(1.05);
+
+}
+
+
+.movie-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.movie-info-overlay {
+  position: absolute;
+  top: 50%; /* Centre verticalement */
+  left: 50%; /* Centre horizontalement */
+  transform: translate(-50%, -50%); /* Ajuste l'alignement */
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border-radius: 8px; /* Optionnel : ajoute des coins arrondis */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacement entre les lignes */
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.movie-info ion-icon {
+  font-size: 18px;
+  color: gold; /* Couleur de l'icône */
 }
