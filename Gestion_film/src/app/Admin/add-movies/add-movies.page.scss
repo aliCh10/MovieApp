@@ -1,0 +1,44 @@
+/* success-alert */
+.success-alert .alert-header {
+  color: green;
+}
+
+.success-alert .alert-message {
+  color: green;
+}
+
+.success-alert::before {
+  content: '\f00c';  /* Font Awesome checkmark icon */
+  font-family: 'Ionicons';
+  margin-right: 10px;
+}
+
+/* error-alert */
+.error-alert .alert-header {
+  color: red;
+}
+
+.error-alert .alert-message {
+  color: red;
+}
+
+.error-alert::before {
+  content: '\f057';  /* Font Awesome times-circle icon */
+  font-family: 'Ionicons';
+  margin-right: 10px;
+}
+
+/* warning-alert */
+.warning-alert .alert-header {
+  color: orange;
+}
+
+.warning-alert .alert-message {
+  color: orange;
+}
+
+.warning-alert::before {
+  content: '\f071';  /* Font Awesome exclamation-triangle icon */
+  font-family: 'Ionicons';
+  margin-right: 10px;
+}

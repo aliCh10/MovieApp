@@ -1,3 +1,21 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button  routerLink="/add-movies">
+      <ion-icon name="add-circle-outline"></ion-icon>
+      Ajouter film
+    </ion-tab-button>
+    <ion-tab-button routerLink="/getallfilm">
+      <ion-icon name="list-outline"></ion-icon>
+      lists Films
+    </ion-tab-button>
+    <ion-tab-button routerLink="/add-film">
+      <ion-icon name="person-outline"></ion-icon>
+      Profile
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
