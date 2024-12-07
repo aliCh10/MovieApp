@@ -1,0 +1,66 @@
+form {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 16px rgba(53, 52, 52, 0.1);
+    padding: 24px;
+  }
+  
+  .form-container {
+    margin-top: 20px;
+  }
+  
+  ion-item {
+    margin-bottom: 12px;
+    --background: transparent;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+    --border-radius: 12px;
+    font-weight: bold;
+  }
+  
+  input[type="file"] {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #f5f5f5;
+    width: 100%;
+  }
+  
+  ion-toolbar {
+    --background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+  }
+  
+  ion-title {
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  ion-label {
+    font-weight: 500;
+  }
+  ion-datetime {
+    --background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    color: #333;
+  }
+  
+  ion-datetime::part(native) {
+    font-size: 16px;
+  }
+  ion-item .form-item {
+    --border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  
+  ion-datetime {
+    margin: 20px;
+  }
+  
+  
+  

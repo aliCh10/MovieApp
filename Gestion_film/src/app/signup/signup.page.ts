@@ -33,7 +33,7 @@ export class SignupPage {
       const response = await fetch(image.dataUrl!);
       this.uploadedPhoto = await response.blob();
 
-      this.profilePic = image.dataUrl;  // Pour afficher l'aperçu de l'image
+      this.profilePic = image.dataUrl;  
     } catch (e) {
       console.error('Erreur de capture de la photo:', e);
       this.showAlert('Failed to capture photo.');

@@ -1,11 +1,12 @@
 /* Styles communs aux deux pages */
 .auth-container {
   text-align: center;
-  margin-top: 50px;
-  padding: 25px;
+  // padding: 25px;
   background: linear-gradient(to bottom right, #6a11cb, #2575fc); /* Dégradé bleu-violet moderne */
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
 
   .title {
     font-size: 2.5rem;

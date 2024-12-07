@@ -4,7 +4,9 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.page.html',  // Ensure this points to your HTML template file
+  templateUrl: './login.page.html',  
+  styleUrls: ['./login.page.scss'] 
+
 })
 export class LoginPage {
   email: string = '';
@@ -17,7 +19,7 @@ export class LoginPage {
       const user = await this.authService.login({ email: this.email, password: this.password });
       if (user) {
         console.log('Login successful:', user);
-        this.router.navigate(['/dashboard']);  // Navigate to a dashboard or home page after login
+        this.router.navigate(['/home']);  // Navigate to a dashboard or home page after login
       } else {
         console.log('Login failed. Please check your credentials.');
       }

@@ -80,15 +80,15 @@ swiper-container {
 }
 
 /* Overlay styling */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  transition: background 0.3s ease-in-out;
-}
+// .overlay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.5);
+//   transition: background 0.3s ease-in-out;
+// }
 
 .hero-slide-item:hover .overlay {
   background: rgba(0, 0, 0, 0.7);
@@ -175,210 +175,211 @@ swiper-container {
 
 .item-action i {
   margin-right: 10px;
-
-/* Keyframes for fade-in animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
-/* Media queries pour la réactivité */
+// /* Keyframes for fade-in animation */
+// @keyframes fadeInUp {
+//   from {
+//     opacity: 0;
+//     transform: translateY(30px);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
 
-/* Pour les petits écrans (smartphones) */
-@media (max-width: 600px) {
-  .hero-slide-item img {
-    height: auto; /* Ajuste la hauteur de l'image pour s'adapter à la taille de l'écran */
-  }
-  .item-action {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-  }
+// /* Media queries pour la réactivité */
 
-  .item-content-title {
-    font-size: 20px; /* Réduire la taille du titre */
-    margin-bottom: 8px;
-  }
+// /* Pour les petits écrans (smartphones) */
+// @media (max-width: 600px) {
+//   .hero-slide-item img {
+//     height: auto; /* Ajuste la hauteur de l'image pour s'adapter à la taille de l'écran */
+//   }
+//   .item-action {
+//     position: absolute;
+//     bottom: 10px;
+//     width: 100%;
+//     text-align: center;
+//   }
 
-  .item-content-description {
-    font-size: 12px; /* Réduire la taille de la description */
-    margin-bottom: 12px;
-  }
+//   .item-content-title {
+//     font-size: 20px; /* Réduire la taille du titre */
+//     margin-bottom: 8px;
+//   }
 
-  .movie-infos {
-    flex-direction: column; /* Empiler les informations verticalement */
-    gap: 8px;
-  }
+//   .item-content-description {
+//     font-size: 12px; /* Réduire la taille de la description */
+//     margin-bottom: 12px;
+//   }
 
-  .item-action a {
-    padding: 8px 15px;
-    font-size: 14px;
-  }
+//   .movie-infos {
+//     flex-direction: column; /* Empiler les informations verticalement */
+//     gap: 8px;
+//   }
 
-  #container {
-    margin-bottom: 20px;
-  }
-}
+//   .item-action a {
+//     padding: 8px 15px;
+//     font-size: 14px;
+//   }
 
-/* Pour les tablettes */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .hero-slide-item {
-    height: 50vh;
-  }
+//   #container {
+//     margin-bottom: 20px;
+//   }
+// }
 
-  .item-content-title {
-    font-size: 28px; /* Taille du titre sur tablette */
-    margin-bottom: 15px;
-  }
+// /* Pour les tablettes */
+// @media (min-width: 601px) and (max-width: 1024px) {
+//   .hero-slide-item {
+//     height: 50vh;
+//   }
 
-  .item-content-description {
-    font-size: 14px;
-    margin-bottom: 18px;
-  }
+//   .item-content-title {
+//     font-size: 28px; /* Taille du titre sur tablette */
+//     margin-bottom: 15px;
+//   }
 
-  .movie-infos {
-    gap: 12px;
-  }
+//   .item-content-description {
+//     font-size: 14px;
+//     margin-bottom: 18px;
+//   }
 
-  .item-action a {
-    padding: 9px 18px;
-    font-size: 16px;
-  }
-}
+//   .movie-infos {
+//     gap: 12px;
+//   }
 
-/* Pour les grands écrans (desktop) */
-@media (min-width: 1025px) {
-  .hero-slide-item {
-    height: 50vh; /* Toujours 50vh pour les grands écrans */
-  }
+//   .item-action a {
+//     padding: 9px 18px;
+//     font-size: 16px;
+//   }
+// }
 
-  .item-content-title {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
+// /* Pour les grands écrans (desktop) */
+// @media (min-width: 1025px) {
+//   .hero-slide-item {
+//     height: 50vh; /* Toujours 50vh pour les grands écrans */
+//   }
 
-  .item-content-description {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
+//   .item-content-title {
+//     font-size: 36px;
+//     margin-bottom: 20px;
+//   }
 
-  .movie-infos {
-    gap: 15px;
-  }
+//   .item-content-description {
+//     font-size: 14px;
+//     margin-bottom: 20px;
+//   }
 
-  .item-action a {
-    padding: 10px 20px;
-    font-size: 18px;
-  }
-}
-}
+//   .movie-infos {
+//     gap: 15px;
+//   }
 
-
-
-
-.movie-item {
-  width: 100%;
-  max-width: 300px;
-  margin: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Hover effect for animation */
-.movie-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive styling */
-@media (max-width: 768px) {
-  .movie-infos {
-     /* Les éléments s'alignent verticalement sur petits écrans */
-    gap: 5px;
-  }
-  .movie-item {
-    max-width: 250px;
-  }
-}
-
-@media (max-width: 480px) {
-  .movie-item {
-    max-width: 200px;
-  }
-  .movie-item-title {
-    font-size: 8px;
-  }
-  .movie-info ion-icon {
-    font-size: 8px;
-  }
-  .movie-info ion-label {
-    font-size: 8px;
-    font-weight: bold;
-  }
-}
-
-/* Slide animation for the movie card */
-ion-slide {
-  opacity: 0;
-  animation: slide-in 0.5s forwards;
-}
-
-@keyframes slide-in {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Smooth transition for ion-img */
-ion-img {
-  transition: transform 0.5s ease;
-}
-
-ion-card:hover ion-img {
-  transform: scale(1.05);
-
-}
+//   .item-action a {
+//     padding: 10px 20px;
+//     font-size: 18px;
+//   }
+// }
+// }
 
 
-.movie-image-wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
 
-.movie-info-overlay {
-  position: absolute;
-  top: 50%; /* Centre verticalement */
-  left: 50%; /* Centre horizontalement */
-  transform: translate(-50%, -50%); /* Ajuste l'alignement */
-  text-align: center;
-  color: white;
-  padding: 10px;
-  border-radius: 8px; /* Optionnel : ajoute des coins arrondis */
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Espacement entre les lignes */
-}
 
-.movie-info {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
+// .movie-item {
+//   width: 100%;
+//   max-width: 300px;
+//   margin: 10px;
+//   transition: transform 0.3s ease, box-shadow 0.3s ease;
+//   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+// }
 
-.movie-info ion-icon {
-  font-size: 18px;
-  color: gold; /* Couleur de l'icône */
-}
+// /* Hover effect for animation */
+// .movie-item:hover {
+//   transform: scale(1.05);
+//   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+// }
+
+// /* Responsive styling */
+// @media (max-width: 768px) {
+//   .movie-infos {
+//      /* Les éléments s'alignent verticalement sur petits écrans */
+//     gap: 5px;
+//   }
+//   .movie-item {
+//     max-width: 250px;
+//   }
+// }
+
+// @media (max-width: 480px) {
+//   .movie-item {
+//     max-width: 200px;
+//   }
+//   .movie-item-title {
+//     font-size: 8px;
+//   }
+//   .movie-info ion-icon {
+//     font-size: 8px;
+//   }
+//   .movie-info ion-label {
+//     font-size: 8px;
+//     font-weight: bold;
+//   }
+// }
+
+// /* Slide animation for the movie card */
+// ion-slide {
+//   opacity: 0;
+//   animation: slide-in 0.5s forwards;
+// }
+
+// @keyframes slide-in {
+//   0% {
+//     transform: translateX(-100%);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+// }
+
+// /* Smooth transition for ion-img */
+// ion-img {
+//   transition: transform 0.5s ease;
+// }
+
+// ion-card:hover ion-img {
+//   transform: scale(1.05);
+
+// }
+
+
+// .movie-image-wrapper {
+//   position: relative;
+//   overflow: hidden;
+//   width: 100%;
+// }
+
+// .movie-info-overlay {
+//   position: absolute;
+//   top: 50%; /* Centre verticalement */
+//   left: 50%; /* Centre horizontalement */
+//   transform: translate(-50%, -50%); /* Ajuste l'alignement */
+//   text-align: center;
+//   color: white;
+//   padding: 10px;
+//   border-radius: 8px; /* Optionnel : ajoute des coins arrondis */
+//   display: flex;
+//   flex-direction: column;
+//   gap: 10px; /* Espacement entre les lignes */
+// }
+
+// .movie-info {
+//   display: flex;
+//   align-items: center;
+//   gap: 5px;
+// }
+
+// .movie-info ion-icon {
+//   font-size: 18px;
+//   color: gold; /* Couleur de l'icône */
+// }
