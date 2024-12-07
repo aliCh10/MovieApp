@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Liste des Films</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div *ngIf="films.length > 0; else noFilms">
+
+    <ion-list>
+
+      <ion-item *ngFor="let film of films">
+        <ion-thumbnail slot="start">
+          <img [src]="'http://localhost:3000/' + film.photoUrl" alt="Film image">
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{ film.title }}</h2>
+          <p>{{ film.description }}</p>
+          <p><strong>Réalisateur:</strong> {{ film.director }}</p>
+          <p><strong>Date de sortie:</strong> {{ film.releaseDate | date }}</p>
+        </ion-label>
+        <ion-button color="danger" >Supprimer</ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- Message affiché s'il n'y a pas de films -->
+  <ng-template #noFilms>
+    <ion-text color="medium">
+      <p>Aucun film disponible.</p>
+    </ion-text>
+  </ng-template>
+</ion-content>
+
+
+
