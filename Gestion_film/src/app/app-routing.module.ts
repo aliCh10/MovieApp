@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'getallfilm',
     loadChildren: () => import('./Admin/getallfilm/getallfilm.module').then( m => m.GetallfilmPageModule)
   },
+  {
+    path: 'users-list',
+    loadChildren: () => import('./Admin/users-list/users-list.module').then( m => m.UsersListPageModule)
+  },
 
   
   

@@ -1,3 +1,4 @@
+// Exemple de code pour afficher l'image dans le frontend
 import { Component, OnInit } from '@angular/core';
 import { AdminserviceService } from '../adminservice.service';
 import { Film } from '../Film';
@@ -8,28 +9,23 @@ import { Film } from '../Film';
   styleUrls: ['./getallfilm.page.scss'],
 })
 export class GetallfilmPage implements OnInit {
-  films: Film[] = [];  // Declare the films array
+  films: Film[] = [];  // Déclarer le tableau des films
+  apiUrl = 'http://localhost:3000';  // L'URL de base de votre backend
 
-  constructor(private service:AdminserviceService) { }
+  constructor(private service: AdminserviceService) { }
+
 
   ngOnInit() {
-    return this.service.getFilms().subscribe({
-      next: (data) => {console.log(data)
-        const filmsArray: Film[] = [];
-        for (const key in data) {
-          filmsArray.push({ ...data[key], id: key });
-
+    this.service.getFilms().subscribe(films => {
+      this.films = films;
+  
+      // Ajout du chemin complet pour les images
+      this.films.forEach(film => {
+        if (film.photoUrl) {
+          film.photoUrl = `${this.apiUrl}${film.photoUrl}`;  // Préfixez l'URL avec l'URL de l'API backend
         }
-        console.log(filmsArray);
-        this.films = filmsArray;
-
-
-      },
-      error: (error) => console.error(error)
-
-
-    })
-
+      });
+    });
   }
-
+  
 }

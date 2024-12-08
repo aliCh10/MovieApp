@@ -1,32 +1,38 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Ajouter un Film</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">🎥 Ajouter un Film 🎬</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
-    <ion-item>
-      <ion-label position="floating">Titre</ion-label>
-      <ion-input [(ngModel)]="film.title" name="title" required></ion-input>
+<ion-content class="ion-padding">
+  <form (ngSubmit)="onSubmit()" enctype="multipart/form-data" class="form-container">
+    <ion-item class="form-item">
+      <ion-label position="floating" color="medium">Titre du Film</ion-label>
+      <ion-input [(ngModel)]="film.title" color="success" name="title" required ></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label position="floating">Description</ion-label>
-      <ion-textarea [(ngModel)]="film.description" name="description" required></ion-textarea>
+
+    <ion-item class="form-item">
+      <ion-label position="floating" color="medium">Description</ion-label>
+      <ion-textarea [(ngModel)]="film.description" name="description" required ></ion-textarea>
     </ion-item>
-    <ion-item>
-      <ion-label position="floating">Réalisateur</ion-label>
-      <ion-input [(ngModel)]="film.director" name="director" required></ion-input>
+
+    <ion-item class="form-item">
+      <ion-label position="floating" color="medium">Réalisateur du Film</ion-label>
+      <ion-input [(ngModel)]="film.director" name="director" required ></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label position="floating">Date de Sortie</ion-label>
-      <ion-input type="date" [(ngModel)]="film.releaseDate" name="releaseDate" required></ion-input>
+
+    <ion-item class="form-item">
+      <ion-label position="floating" color="medium">Date de Sortie</ion-label>
+      <ion-datetime [(ngModel)]="film.releaseDate" name="releaseDate" required ></ion-datetime>
     </ion-item>
-    <ion-item>
+
+    <ion-item class="form-item">
+      <ion-label position="stacked" color="medium">Image du Film</ion-label>
       <input type="file" (change)="onFileSelected($event)" />
     </ion-item>
-    <ion-button expand="block" type="submit">Ajouter le Film</ion-button>
+
+    <ion-button expand="block" type="submit" color="secondary" shape="round">
+      🎬 Ajouter le Film
+    </ion-button>
   </form>
 </ion-content>
-
-

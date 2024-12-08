@@ -27,6 +27,7 @@
     </ion-list>
   </ion-content>
 </ion-menu>
+
 <div class="ion-page" id="main-content">
   <ion-header>
     <ion-toolbar>
@@ -38,118 +39,61 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
+
   <ion-content class="ion-padding">
-
     <swiper-container>
-      <swiper-slide>
+      <swiper-slide *ngFor="let film of films">
         <div class="hero-slide-item">
-            <img src="../../assets/images/black-banner.png" alt="">
-            <div class="overlay"></div>
-            <div class="hero-slide-item-content">
-                <div class="item-content-wraper">
-                    <div class="item-content-title top-down">
-                        Black Panther
-                    </div>
-                    <div class="movie-infos top-down delay-2">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>120 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>16+</span>
-                        </div>
-                    </div>
-                    <div class="item-content-description top-down delay-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius.
-                    </div>
-                    <div class="item-action top-down delay-6">
-                        <a href="#" class="btn btn-hover">
-                            <i class="bx bxs-right-arrow"></i>
-                            <span>Watch now</span>
-                        </a>
-                    </div>
-                </div>
+          <img [src]="film.photoUrl" alt="{{ film.title }}" />
+          <div class="overlay"></div>
+          <div class="hero-slide-item-content">
+            <div class="item-content-wraper">
+              <div class="item-content-title top-down">
+                {{ film.title }}
+              </div>
+              <div class="item-content-description top-down delay-4">
+                {{ film.description }}
+              </div>
+              <div class="item-action top-down delay-6">
+                <a href="#" class="btn btn-hover">
+                  <i class="bx bxs-right-arrow"></i>
+                  <span>Watch now</span>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </swiper-slide>
-
-      <swiper-slide>Slide 2</swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
+      </swiper-slide>
     </swiper-container>
-
 
     <ion-grid fixed>
       <ion-row>
-
-
-        <ion-col size="6">
+        <ion-col size="10" size-md="3" *ngFor="let film of films">
           <ion-card class="movie-item">
-          <div class="movie-item-content">
-            <ion-img src="../../assets/images/movies/love-roise.jpg" alt="Theatre of the Dead"></ion-img>
+            <div class="movie-item-content">
+              <ion-img [src]="film.photoUrl" alt="{{ film.title }}"></ion-img>
 
+              <ion-card-content>
+                <div class="movie-infos">
+                  <div class="movie-info">
+                    <ion-icon name="star-outline" slot="start" class="favorite-icon" >
+                  </ion-icon>
 
-            <ion-card-content>
-              <div class="movie-infos">
-                <div class="movie-info">
-                  <ion-icon name="star" slot="start"></ion-icon>
-                  <ion-label>9.5</ion-label>
+                  <ion-label>{{ film.director }}</ion-label>
+                  </div>
+                  <div class="movie-info">
+                    <ion-icon name="time" slot="start"></ion-icon>
+                    <ion-label>{{ film.releaseDate }} </ion-label>
+                  </div>
+                  <div class="movie-info">
+                    <ion-label>{{ film.description }}</ion-label>
+                  </div>
                 </div>
-                <div class="movie-info">
-                  <ion-icon name="time" slot="start"></ion-icon>
-                  <ion-label>120 mins</ion-label>
-                </div>
-                <div class="movie-info">
-                  <ion-label>HD</ion-label>
-                </div>
-                <div class="movie-info">
-                  <ion-label>16+</ion-label>
-                </div>
-              </div>
-            </ion-card-content>
-          </div>
-        </ion-card>
+              </ion-card-content>
+            </div>
+          </ion-card>
         </ion-col>
-        <ion-col size="6">
-          <ion-card class="movie-item">
-          <div class="movie-item-content">
-            <ion-img src="../../assets/images/movies/love-roise.jpg" alt="Theatre of the Dead"></ion-img>
-
-
-            <ion-card-content>
-              <div class="movie-infos">
-                <div class="movie-info">
-                  <ion-icon name="star" slot="start"></ion-icon>
-                  <ion-label>9.5</ion-label>
-                </div>
-                <div class="movie-info">
-                  <ion-icon name="time" slot="start"></ion-icon>
-                  <ion-label>120 mins</ion-label>
-                </div>
-                <div class="movie-info">
-                  <ion-label>HD</ion-label>
-                </div>
-                <div class="movie-info">
-                  <ion-label>16+</ion-label>
-                </div>
-              </div>
-            </ion-card-content>
-          </div>
-        </ion-card>
-        </ion-col>
-
-
       </ion-row>
     </ion-grid>
-
-
   </ion-content>
-
-
 </div>

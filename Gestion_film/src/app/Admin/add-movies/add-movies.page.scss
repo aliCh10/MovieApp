@@ -1,44 +1,90 @@
-/* success-alert */
-.success-alert .alert-header {
-  color: green;
+/* Style global pour un fond plus neutre */
+ion-content {
+  background: #f4f4f9; /* Couleur de fond claire et neutre, similaire aux autres pages */
+  padding: 24px;
 }
 
-.success-alert .alert-message {
-  color: green;
+form {
+  border-radius: 16px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); /* Légère ombre pour donner de la profondeur */
+  padding: 24px;
+  margin: 10px;
 }
 
-.success-alert::before {
-  content: '\f00c';  /* Font Awesome checkmark icon */
-  font-family: 'Ionicons';
-  margin-right: 10px;
+ion-header {
+  --background: #007bff; /* Couleur d'arrière-plan de l'en-tête, similaire à une couleur d'action */
 }
 
-/* error-alert */
-.error-alert .alert-header {
-  color: red;
+ion-toolbar {
+  --background: #007bff;
 }
 
-.error-alert .alert-message {
-  color: red;
+ion-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
 }
 
-.error-alert::before {
-  content: '\f057';  /* Font Awesome times-circle icon */
-  font-family: 'Ionicons';
-  margin-right: 10px;
+.ion-text-center {
+  text-align: center;
 }
 
-/* warning-alert */
-.warning-alert .alert-header {
-  color: orange;
+ion-item {
+  margin-bottom: 16px;
+  --background: transparent;
+  --border-color: #007bff; /* Accent color bleu pour les bordures */
+  --border-style: solid;
+  --border-width: 1px;
 }
 
-.warning-alert .alert-message {
-  color: orange;
+ion-label {
+  font-weight: bold;
+  color: #555; /* Gris foncé pour les labels */
 }
 
-.warning-alert::before {
-  content: '\f071';  /* Font Awesome exclamation-triangle icon */
-  font-family: 'Ionicons';
-  margin-right: 10px;
+ion-input, ion-textarea, ion-datetime {
+  --color: #333; /* Texte sombre pour les champs de saisie */
+}
+
+ion-datetime-button {
+  margin-top: 16px;
+}
+
+input[type="file"] {
+  border: 2px solid #007bff; /* Bordure bleu pour le champ de fichier */
+  border-radius: 12px;
+  padding: 8px;
+  width: 100%;
+}
+
+ion-button {
+  margin-top: 24px;
+  --border-radius: 12px;
+  font-weight: bold;
+  background: #007bff; /* Bouton bleu */
+  color: white; /* Texte du bouton en blanc */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+ion-button:active {
+  background: #0056b3; /* Changement de couleur lors de l'activation du bouton */
+  transform: scale(0.98); /* Légère échelle lors du clic */
+}
+
+ion-title {
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+ion-item.form-item {
+  --border-radius: 12px;
+}
+
+ion-datetime {
+  margin: 10px 0;
+}
+
+ion-datetime::part(native) {
+  font-size: 16px;
 }

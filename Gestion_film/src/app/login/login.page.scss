@@ -1,12 +1,11 @@
-// Common styles for both pages
 .auth-container {
   text-align: center;
-  margin: 50px auto;
   padding: 25px;
-  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
-  border-radius: 20px;
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc); /* Dégradé bleu-violet moderne */
+  border-radius: 15px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-  max-width: 400px; // Ensures the container doesn't get too wide on larger screens
+  height: 100%;
+  width: 100%;
 
   .title {
     font-size: 2.5rem;
@@ -85,24 +84,20 @@
   }
 }
 
-// Responsive breakpoints
 @media (max-width: 768px) {
   .auth-container {
-    width: 90%;  // Use more width on smaller screens
+    width: 90%;
     padding: 20px;
 
     .title {
-      font-size: 2rem;  // Slightly smaller title
+      font-size: 2rem;
     }
-
     .subtitle {
       font-size: 1rem;
     }
-
     .flix-image {
       width: 80px;
     }
-
     .auth-button {
       font-size: 1rem;
     }
@@ -111,28 +106,24 @@
 
 @media (max-width: 480px) {
   .auth-container {
-    width: 95%;  // Nearly full width on small screens
+    width: 95%;
     padding: 15px;
 
     .title {
       font-size: 1.8rem;
     }
-
     .subtitle {
       font-size: 0.9rem;
     }
-
     .flix-image {
       width: 70px;
     }
-
     .auth-button {
       font-size: 0.9rem;
     }
   }
 }
 
-// Fade-In Animation
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -141,20 +132,5 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-// Specific page overrides for consistency
-.signup-page, .login-page {
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  .auth-button {
-    background: linear-gradient(90deg, #ff416c, #ff4b2b);
   }
 }
