@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">👤 Liste des Utilisateurs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="users.length > 0; else noUsers">
+    <ion-list lines="full" class="list">
+      <ion-item *ngFor="let user of users" class="user-item">
+        <div class="user-item-content">
+          <!-- Avatar -->
+          <ion-thumbnail slot="start" class="user-thumbnail">
+            <img [src]="user.photoURL" alt="Avatar Utilisateur" />
+          </ion-thumbnail>
+
+          <!-- Informations Utilisateur -->
+          <ion-label class="user-label">
+            <h2>{{ user.username }}</h2>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Status:</strong> {{ user.isBlocked ? 'Bloqué' : 'Actif' }}</p>
+          </ion-label>
+        </div>
+
+        <!-- Bouton Bloquer/Débloquer -->
+        <ion-button [color]="user.isBlocked ? 'danger' : 'success'" fill="outline" slot="end" (click)="toggleBlock(user)">
+          <ion-icon [name]="user.isBlocked ? 'lock-closed-outline' : 'lock-open-outline'" slot="start"></ion-icon>
+          {{ user.isBlocked ? 'Débloquer' : 'Bloquer' }}
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- Message Aucun Utilisateur -->
+  <ng-template #noUsers>
+    <div class="empty-state">
+      <ion-icon name="person-outline" size="large" color="medium"></ion-icon>
+      <ion-text color="medium">
+        <p>Aucun utilisateur disponible pour le moment.</p>
+      </ion-text>
+    </div>
+  </ng-template>
+</ion-content>

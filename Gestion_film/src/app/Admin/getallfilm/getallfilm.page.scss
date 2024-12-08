@@ -1,0 +1,51 @@
+.film-item {
+    border-radius: 8px;
+    margin: 10px 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+  
+  .film-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .film-item-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .film-thumbnail {
+    width: 80px; /* Taille plus petite de l'image */
+    height: 80px;
+    margin-right: 15px;
+  }
+  
+  .film-label {
+    flex: 1;
+    
+  }
+  
+  .film-label h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  .film-label p {
+    font-size: 0.9rem;
+    margin: 2px 0;
+    color: #606060;
+  }
+  
+  ion-thumbnail img {
+    border-radius: 5px;
+  }
+  
+  ion-button {
+    --padding-start: 10px;
+    --padding-end: 10px;
+    --border-radius: 5px;
+  }

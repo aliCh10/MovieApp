@@ -1,57 +1,38 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title class="ion-text-center">Ajouter un Film</ion-title>
+    <ion-title class="ion-text-center">🎥 Ajouter un Film 🎬</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <form (ngSubmit)="onSubmit()" enctype="multipart/form-data" class="form-container">
     <ion-item class="form-item">
-      <ion-label position="floating" color="medium">Titre</ion-label>
-      <ion-input [(ngModel)]="film.title" name="title" required></ion-input>
+      <ion-label position="floating" color="medium">Titre du Film</ion-label>
+      <ion-input [(ngModel)]="film.title" color="success" name="title" required ></ion-input>
     </ion-item>
 
     <ion-item class="form-item">
       <ion-label position="floating" color="medium">Description</ion-label>
-      <ion-textarea [(ngModel)]="film.description" name="description" required></ion-textarea>
+      <ion-textarea [(ngModel)]="film.description" name="description" required ></ion-textarea>
     </ion-item>
 
     <ion-item class="form-item">
-      <ion-label position="floating" color="medium">Réalisateur</ion-label>
-      <ion-input [(ngModel)]="film.director" name="director" required></ion-input>
+      <ion-label position="floating" color="medium">Réalisateur du Film</ion-label>
+      <ion-input [(ngModel)]="film.director" name="director" required ></ion-input>
     </ion-item>
-    <ion-datetime-button datetime="datetime"></ion-datetime-button>
-
-    <ion-datetime-button datetime="datetime"></ion-datetime-button>
-
-    <ion-modal [keepContentsMounted]="true">
-      <ng-template>
-        <ion-datetime
-          id="datetime"
-          presentation="date-time"
-          value="2023-11-02T01:22:00"
-          [formatOptions]="{
-            date: {
-              weekday: 'short',
-              month: 'long',
-              day: '2-digit',
-            },
-            time: {
-              hour: '2-digit',
-              minute: '2-digit',
-            },
-          }"
-        ></ion-datetime>
-      </ng-template>
-    </ion-modal>
 
     <ion-item class="form-item">
-      <ion-label position="stacked" color="medium">Affiche du Film</ion-label>
+      <ion-label position="floating" color="medium">Date de Sortie</ion-label>
+      <ion-datetime [(ngModel)]="film.releaseDate" name="releaseDate" required ></ion-datetime>
+    </ion-item>
+
+    <ion-item class="form-item">
+      <ion-label position="stacked" color="medium">Image du Film</ion-label>
       <input type="file" (change)="onFileSelected($event)" />
     </ion-item>
 
     <ion-button expand="block" type="submit" color="secondary" shape="round">
-      Ajouter le Film
+      🎬 Ajouter le Film
     </ion-button>
   </form>
 </ion-content>
